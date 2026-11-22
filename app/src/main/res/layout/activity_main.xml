@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#100A1F"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Arif_Ip_Tv"
+        android:textColor="#E9D5FF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/playlistUrl"
+            android:hint="Paste M3U / M3U8 playlist URL"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B7A8CC"
+            android:inputType="textUri"
+            android:backgroundTint="#A78BFA"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/loadUrl"
+            android:text="LOAD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/openFile"
+        android:text="OPEN M3U FILE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/status"
+        android:text="Add a playlist URL or open an M3U file."
+        android:textColor="#C4B5FD"
+        android:padding="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#000000"
+        app:use_controller="true" />
+
+    <TextView
+        android:text="CHANNELS"
+        android:textColor="#E9D5FF"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/channelList"
+        android:divider="#382653"
+        android:dividerHeight="1dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="#49306B"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
